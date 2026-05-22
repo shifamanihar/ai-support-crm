@@ -1,0 +1,211 @@
+/* =========================
+   ANALYTICS CARD
+========================= */
+
+.analytics-card {
+
+  width: 100%;
+
+  min-height: 180px;
+
+  background: linear-gradient(
+    180deg,
+    #111827,
+    #1a2438
+  );
+
+  border-radius: 28px;
+
+  padding: 26px;
+
+  border: 1px solid
+    rgba(0,216,255,0.12);
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 0 25px
+    rgba(0,216,255,0.04);
+
+}
+
+
+/* HOVER */
+
+.analytics-card:hover {
+
+  transform: translateY(-6px);
+
+  border-color:
+    rgba(0,216,255,0.28);
+
+  box-shadow:
+    0 15px 35px
+    rgba(0,216,255,0.12);
+
+}
+
+
+/* =========================
+   TOP SECTION
+========================= */
+
+.analytics-top {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+
+}
+
+
+/* TITLE */
+
+.analytics-top h2 {
+
+  color: #94a3b8;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  line-height: 1.5;
+
+}
+
+
+/* ICON */
+
+.analytics-icon {
+
+  width: 52px;
+
+  height: 52px;
+
+  border-radius: 16px;
+
+  background: linear-gradient(
+    135deg,
+    #00d8ff,
+    #0066ff
+  );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: white;
+
+  font-size: 20px;
+
+  box-shadow:
+    0 8px 20px
+    rgba(0,216,255,0.2);
+
+}
+
+
+/* =========================
+   COUNT
+========================= */
+
+.analytics-count {
+
+  color: #00d8ff;
+
+  font-size: 48px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  margin-bottom: 18px;
+
+}
+
+
+/* =========================
+   GROWTH TEXT
+========================= */
+
+.analytics-growth {
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .analytics-card {
+
+    padding: 22px;
+
+    border-radius: 24px;
+
+  }
+
+
+  .analytics-count {
+
+    font-size: 40px;
+
+  }
+
+
+  .analytics-icon {
+
+    width: 46px;
+
+    height: 46px;
+
+    font-size: 18px;
+
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .analytics-card {
+
+    min-height: auto;
+
+    padding: 20px;
+
+  }
+
+
+  .analytics-count {
+
+    font-size: 34px;
+
+  }
+
+
+  .analytics-top h2 {
+
+    font-size: 14px;
+
+  }
+
+}

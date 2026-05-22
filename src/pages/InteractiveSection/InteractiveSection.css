@@ -1,0 +1,314 @@
+.interactive-section {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding: 100px 80px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #020617,
+      #081028
+    );
+
+  color: white;
+
+  overflow: hidden;
+
+}
+
+
+/* TOP */
+
+.interactive-top {
+
+  text-align: center;
+
+  margin-bottom: 70px;
+
+}
+
+
+.interactive-subtitle {
+
+  color: #22d3ee;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 15px;
+
+}
+
+
+.interactive-title {
+
+  font-size: 58px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  max-width: 900px;
+
+  margin: auto;
+
+}
+
+
+/* MAIN CONTAINER */
+
+.interactive-container {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 60px;
+
+}
+
+
+/* LEFT SIDE */
+
+.interactive-left {
+
+  width: 38%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+}
+
+
+/* BUTTON WRAPPER */
+
+.button-wrapper {
+
+  width: 100%;
+
+}
+
+
+/* BUTTON */
+
+.interactive-btn {
+
+  width: 100%;
+
+  padding: 18px 24px;
+
+  border-radius: 16px;
+
+  border:
+    1px solid rgba(34,211,238,0.1);
+
+  background: #0f172a;
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+}
+
+
+.interactive-btn:hover {
+
+  transform: translateX(8px);
+
+  background: #22d3ee;
+
+  color: black;
+
+}
+
+
+/* ACTIVE BUTTON */
+
+.interactive-btn.active {
+
+  background: #22d3ee;
+
+  color: black;
+
+  box-shadow:
+    0 0 30px rgba(34,211,238,0.25);
+
+}
+
+
+/* CONTENT BELOW BUTTON */
+
+.button-content {
+
+  margin-top: 15px;
+
+  padding: 20px;
+
+  background: #0f172a;
+
+  border-radius: 16px;
+
+  border:
+    1px solid rgba(34,211,238,0.08);
+
+  animation:
+    fadeIn 0.4s ease;
+
+}
+
+
+.button-content h3 {
+
+  color: #22d3ee;
+
+  font-size: 24px;
+
+  margin-bottom: 12px;
+
+}
+
+
+.button-content p {
+
+  color: #94a3b8;
+
+  line-height: 1.8;
+
+  font-size: 16px;
+
+}
+
+
+/* RIGHT SIDE */
+
+.interactive-right {
+
+  width: 62%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+
+/* VIDEO */
+
+.interactive-video {
+
+  width: 100%;
+
+  border-radius: 24px;
+
+  border:
+    1px solid rgba(34,211,238,0.1);
+
+  box-shadow:
+    0 0 40px rgba(34,211,238,0.08);
+
+}
+
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(10px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+  .interactive-container {
+
+    flex-direction: column;
+
+  }
+
+  .interactive-left,
+  .interactive-right {
+
+    width: 100%;
+
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .interactive-section {
+
+    padding: 70px 20px;
+
+  }
+
+  .interactive-title {
+
+    font-size: 38px;
+
+  }
+
+  .interactive-btn {
+
+    font-size: 16px;
+
+    padding: 16px 18px;
+
+  }
+
+  .button-content h3 {
+
+    font-size: 20px;
+
+  }
+
+  .button-content p {
+
+    font-size: 15px;
+
+  }
+
+}

@@ -1,0 +1,394 @@
+/* =========================
+   CUSTOMERS PAGE
+========================= */
+
+.customers-page {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding: 10px 0 30px;
+
+  color: white;
+
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.customers-loading {
+
+  width: 100%;
+
+  min-height: 70vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+
+.customers-loading h1 {
+
+  color: #00d8ff;
+
+  font-size: 34px;
+
+  font-weight: 700;
+
+}
+
+
+/* =========================
+   SEARCH BAR
+========================= */
+
+.customers-search {
+
+  width: 100%;
+
+  margin-bottom: 30px;
+
+}
+
+
+.customers-search input {
+
+  width: 100%;
+
+  height: 58px;
+
+  background: linear-gradient(
+    180deg,
+    #111827,
+    #0f172a
+  );
+
+  border: 1px solid
+    rgba(0,216,255,0.12);
+
+  border-radius: 18px;
+
+  padding: 0 22px;
+
+  color: white;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.3s ease;
+
+}
+
+
+.customers-search input:focus {
+
+  border-color: #00d8ff;
+
+  box-shadow:
+    0 0 20px
+    rgba(0,216,255,0.15);
+
+}
+
+
+.customers-search input::placeholder {
+
+  color: #94a3b8;
+
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.customers-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(320px, 1fr)
+    );
+
+  gap: 24px;
+
+}
+
+
+/* =========================
+   CUSTOMER CARD
+========================= */
+
+.customer-card {
+
+  background: linear-gradient(
+    180deg,
+    #111827,
+    #1a2438
+  );
+
+  border: 1px solid
+    rgba(0,216,255,0.08);
+
+  border-radius: 28px;
+
+  padding: 26px;
+
+  transition: all 0.3s ease;
+
+  overflow: hidden;
+
+  position: relative;
+
+}
+
+
+.customer-card:hover {
+
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(0,216,255,0.25);
+
+  box-shadow:
+    0 15px 35px
+    rgba(0,216,255,0.08);
+
+}
+
+
+/* =========================
+   TOP SECTION
+========================= */
+
+.customer-top {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 28px;
+
+}
+
+
+/* AVATAR */
+
+.customer-avatar {
+
+  width: 64px;
+
+  height: 64px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #00d8ff,
+    #0066ff
+  );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: white;
+
+  font-size: 24px;
+
+  flex-shrink: 0;
+
+  box-shadow:
+    0 10px 25px
+    rgba(0,216,255,0.2);
+
+}
+
+
+/* NAME */
+
+.customer-top h2 {
+
+  color: white;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  margin-bottom: 6px;
+
+}
+
+
+/* LABEL */
+
+.customer-top p {
+
+  color: #94a3b8;
+
+  font-size: 14px;
+
+}
+
+
+/* =========================
+   CUSTOMER INFO
+========================= */
+
+.customer-info {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+
+  color: #cbd5e1;
+
+  font-size: 15px;
+
+  word-break: break-word;
+
+}
+
+
+.customer-info svg {
+
+  color: #00d8ff;
+
+  min-width: 16px;
+
+}
+
+
+/* =========================
+   LATEST TICKET
+========================= */
+
+.latest-ticket {
+
+  margin-top: 28px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid
+    rgba(255,255,255,0.06);
+
+}
+
+
+.latest-ticket h4 {
+
+  color: #00d8ff;
+
+  font-size: 15px;
+
+  margin-bottom: 10px;
+
+  font-weight: 600;
+
+}
+
+
+.latest-ticket p {
+
+  color: #94a3b8;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+  .customers-grid {
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .customers-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .customer-card {
+
+    padding: 22px;
+
+    border-radius: 24px;
+
+  }
+
+
+  .customer-top h2 {
+
+    font-size: 20px;
+
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .customers-search input {
+
+    height: 54px;
+
+    font-size: 14px;
+
+  }
+
+
+  .customer-avatar {
+
+    width: 56px;
+
+    height: 56px;
+
+    font-size: 20px;
+
+  }
+
+
+  .customer-top h2 {
+
+    font-size: 18px;
+
+  }
+
+}

@@ -1,0 +1,370 @@
+/* =========================
+   SIDEBAR ROOT
+========================= */
+
+.sidebar {
+
+  --sidebar-width: 280px;
+
+  --sidebar-bg-1: #081028;
+
+  --sidebar-bg-2: #050816;
+
+  --primary-color: #00d8ff;
+
+  --primary-gradient: linear-gradient(
+    135deg,
+    #00d8ff,
+    #0066ff
+  );
+
+  --text-color: #cbd5e1;
+
+  --danger-color: #ff4d4d;
+
+  --dark-card: #111827;
+
+  width: var(--sidebar-width);
+
+  height: 100vh;
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  z-index: 1000;
+
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  padding: 28px 20px;
+
+  background: linear-gradient(
+    180deg,
+    var(--sidebar-bg-1),
+    var(--sidebar-bg-2)
+  );
+
+  border-right: 1px solid rgba(0,255,255,0.08);
+
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.sidebar-logo {
+
+  width: 100%;
+
+  margin-bottom: 45px;
+
+}
+
+.sidebar-logo h1 {
+
+  color: var(--primary-color);
+
+  font-size: 42px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  line-height: 1;
+
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.sidebar-menu {
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+
+  flex: 1;
+
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.sidebar-link {
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 17px 18px;
+
+  border-radius: 18px;
+
+  text-decoration: none;
+
+  color: var(--text-color);
+
+  font-size: 17px;
+
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+
+/* ICON */
+
+.sidebar-link svg {
+
+  min-width: 20px;
+
+  font-size: 20px;
+
+  transition: 0.3s;
+
+}
+
+
+/* TEXT */
+
+.sidebar-link span {
+
+  transition: 0.3s;
+
+}
+
+
+/* HOVER */
+
+.sidebar-link:hover {
+
+  background: rgba(0,216,255,0.08);
+
+  color: var(--primary-color);
+
+  transform: translateX(4px);
+
+}
+
+
+/* ACTIVE */
+
+.sidebar-link.active {
+
+  background: var(--primary-gradient);
+
+  color: white;
+
+  box-shadow:
+    0 0 30px rgba(0,216,255,0.35);
+
+}
+
+
+.sidebar-link.active svg {
+
+  color: white;
+
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.sidebar-bottom {
+
+  width: 100%;
+
+  padding-top: 25px;
+
+}
+
+
+/* =========================
+   LOGOUT BUTTON
+========================= */
+
+.logout-btn {
+
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  cursor: pointer;
+
+  padding: 17px;
+
+  border-radius: 18px;
+
+  background: var(--dark-card);
+
+  color: var(--danger-color);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+
+}
+
+
+.logout-btn svg {
+
+  font-size: 18px;
+
+}
+
+
+.logout-btn:hover {
+
+  background: var(--danger-color);
+
+  color: white;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 25px rgba(255,77,77,0.35);
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+  .sidebar {
+
+    width: 90px;
+
+    padding: 20px 12px;
+
+  }
+
+
+  .sidebar-logo {
+
+    display: flex;
+
+    justify-content: center;
+
+  }
+
+
+  .sidebar-logo h1 {
+
+    font-size: 20px;
+
+  }
+
+
+  .sidebar-link {
+
+    justify-content: center;
+
+    padding: 16px 0;
+
+  }
+
+
+  .sidebar-link span {
+
+    display: none;
+
+  }
+
+
+  .sidebar-link svg {
+
+    font-size: 22px;
+
+  }
+
+
+  .logout-btn {
+
+    padding: 16px 0;
+
+    font-size: 0;
+
+  }
+
+
+  .logout-btn svg {
+
+    font-size: 22px;
+
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+  .sidebar {
+
+    width: 75px;
+
+    padding: 18px 10px;
+
+  }
+
+
+  .sidebar-logo h1 {
+
+    font-size: 16px;
+
+  }
+
+
+  .sidebar-link {
+
+    border-radius: 14px;
+
+  }
+
+}

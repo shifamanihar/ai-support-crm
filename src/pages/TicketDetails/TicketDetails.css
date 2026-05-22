@@ -1,0 +1,854 @@
+/* =========================
+   TICKET DETAILS PAGE
+========================= */
+
+.ticket-details-page {
+
+  width: 100%;
+
+  min-height: calc(100vh - 90px);
+
+  padding: 30px;
+
+  color: white;
+
+  background: #050816;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 30px;
+
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.loading-page {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: white;
+
+}
+
+
+.loading-page h1 {
+
+  font-size: 32px;
+
+  color: #00d9ff;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.ticket-header {
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+}
+
+
+.ticket-header h1 {
+
+  font-size: 40px;
+
+  font-weight: 800;
+
+  color: #00d9ff;
+
+  margin-bottom: 10px;
+
+}
+
+
+.ticket-header p {
+
+  color: #94a3b8;
+
+  font-size: 15px;
+
+}
+
+
+/* =========================
+   STATUS BADGE
+========================= */
+
+.status-badge {
+
+  padding: 12px 20px;
+
+  border-radius: 14px;
+
+  font-weight: 700;
+
+  font-size: 13px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+}
+
+
+.status-badge.open {
+
+  background: rgba(59,130,246,0.15);
+
+  color: #3b82f6;
+
+}
+
+
+.status-badge.pending {
+
+  background: rgba(251,191,36,0.15);
+
+  color: #fbbf24;
+
+}
+
+
+.status-badge.resolved {
+
+  background: rgba(34,197,94,0.15);
+
+  color: #22c55e;
+
+}
+
+
+.status-badge.closed {
+
+  background: rgba(239,68,68,0.15);
+
+  color: #ef4444;
+
+}
+
+
+/* =========================
+   COMMON CARD
+========================= */
+
+.ticket-info-card,
+.attachment-box,
+.comments-section {
+
+  width: 100%;
+
+  background: #111827;
+
+  border-radius: 24px;
+
+  padding: 30px;
+
+  border: 1px solid rgba(0,217,255,0.08);
+
+  box-shadow:
+    0 0 25px rgba(0,217,255,0.04);
+
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+.ticket-info-card h2,
+.attachment-box h2,
+.comments-section h2 {
+
+  font-size: 28px;
+
+  color: white;
+
+  margin-bottom: 25px;
+
+}
+
+
+/* =========================
+   INFO GRID
+========================= */
+
+.info-grid {
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(260px,1fr)
+  );
+
+  gap: 24px;
+
+  margin-bottom: 25px;
+
+}
+
+
+.info-grid div {
+
+  background: #1f2937;
+
+  padding: 20px;
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(255,255,255,0.04);
+
+}
+
+
+.info-grid strong {
+
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #00d9ff;
+
+  font-size: 15px;
+
+}
+
+
+.info-grid p {
+
+  color: #d1d5db;
+
+  line-height: 1.6;
+
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description-box {
+
+  width: 100%;
+
+  background: #1f2937;
+
+  border-radius: 18px;
+
+  padding: 24px;
+
+}
+
+
+.description-box strong {
+
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #00d9ff;
+
+}
+
+
+.description-box p {
+
+  color: #d1d5db;
+
+  line-height: 1.8;
+
+}
+
+
+/* =========================
+   ATTACHMENT
+========================= */
+
+.attachment-box a {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 14px 22px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #00d9ff,
+    #0066ff
+  );
+
+  color: white;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+
+}
+
+
+.attachment-box a:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(0,217,255,0.3);
+
+}
+
+
+/* =========================
+   COMMENTS
+========================= */
+
+.comments-list {
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+  margin-bottom: 30px;
+
+}
+
+
+/* =========================
+   COMMENT CARD
+========================= */
+
+.comment-card {
+
+  max-width: 80%;
+
+  padding: 22px;
+
+  border-radius: 20px;
+
+  position: relative;
+
+}
+
+
+.comment-card.agent {
+
+  align-self: flex-end;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0,217,255,0.14),
+    rgba(0,102,255,0.14)
+  );
+
+  border: 1px solid rgba(0,217,255,0.1);
+
+}
+
+
+.comment-card.customer {
+
+  align-self: flex-start;
+
+  background: #1f2937;
+
+  border: 1px solid rgba(255,255,255,0.05);
+
+}
+
+
+/* COMMENT TOP */
+
+.comment-top {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 14px;
+
+}
+
+
+.comment-top h4 {
+
+  color: #00d9ff;
+
+  font-size: 16px;
+
+  margin: 0;
+
+}
+
+
+.comment-top span {
+
+  color: #94a3b8;
+
+  font-size: 12px;
+
+}
+
+
+.comment-card p {
+
+  color: #e5e7eb;
+
+  line-height: 1.7;
+
+  margin: 0;
+
+}
+
+
+/* =========================
+   NO COMMENTS
+========================= */
+
+.no-comments {
+
+  color: #94a3b8;
+
+  font-size: 15px;
+
+}
+
+
+/* =========================
+   REPLY BOX
+========================= */
+
+.reply-box {
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+}
+
+
+/* TEXTAREA */
+
+.reply-box textarea {
+
+  width: 100%;
+
+  min-height: 140px;
+
+  resize: none;
+
+  border: 1px solid #374151;
+
+  outline: none;
+
+  border-radius: 18px;
+
+  background: #1f2937;
+
+  color: white;
+
+  padding: 20px;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+
+}
+
+
+.reply-box textarea:focus {
+
+  border-color: #00d9ff;
+
+  box-shadow:
+    0 0 18px rgba(0,217,255,0.22);
+
+}
+
+
+.reply-box textarea::placeholder {
+
+  color: #94a3b8;
+
+}
+
+
+/* BUTTON */
+
+.reply-box button {
+
+  align-self: flex-end;
+
+  border: none;
+
+  outline: none;
+
+  cursor: pointer;
+
+  padding: 16px 30px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #00d9ff,
+    #0066ff
+  );
+
+  color: white;
+
+  font-weight: 700;
+
+  transition: 0.3s;
+
+}
+
+
+.reply-box button:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(0,217,255,0.3);
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+  .ticket-details-page {
+
+    padding: 24px;
+
+  }
+
+
+  .ticket-header h1 {
+
+    font-size: 34px;
+
+  }
+
+
+  .comment-card {
+
+    max-width: 90%;
+
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .ticket-details-page {
+
+    padding: 20px;
+
+    gap: 24px;
+
+  }
+
+
+  .ticket-header {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+  }
+
+
+  .ticket-header h1 {
+
+    font-size: 28px;
+
+  }
+
+
+  .ticket-info-card,
+  .attachment-box,
+  .comments-section {
+
+    padding: 22px;
+
+  }
+
+
+  .comment-card {
+
+    max-width: 100%;
+
+  }
+
+
+  .reply-box button {
+
+    width: 100%;
+
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+  .ticket-header h1 {
+
+    font-size: 24px;
+
+  }
+
+
+  .ticket-info-card h2,
+  .attachment-box h2,
+  .comments-section h2 {
+
+    font-size: 22px;
+
+  }
+
+
+  .reply-box textarea {
+
+    min-height: 120px;
+
+  }
+
+}
+
+/* ATTACHMENT IMAGE */
+
+.attachment-preview {
+
+  width: 100%;
+
+  max-width: 500px;
+
+  border-radius: 20px;
+
+  margin-top: 20px;
+
+  border: 1px solid rgba(0,217,255,0.1);
+
+}
+
+
+/* FILE LINK */
+
+.attachment-link {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 14px 24px;
+
+  border-radius: 14px;
+
+  margin-top: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #00d9ff,
+    #0066ff
+  );
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+
+}
+
+
+.attachment-link:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(0,217,255,0.3);
+
+}
+
+ /* =========================
+   AI AUTO REPLY
+========================= */
+
+.ai-reply-box {
+
+  margin-bottom: 24px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0,217,255,0.08),
+    rgba(0,102,255,0.08)
+  );
+
+  border: 1px solid rgba(0,217,255,0.1);
+
+  border-radius: 18px;
+
+  padding: 24px;
+
+}
+
+
+.ai-reply-box h3 {
+
+  color: #00d9ff;
+
+  margin-bottom: 14px;
+
+  font-size: 20px;
+
+}
+
+
+.ai-reply-box p {
+
+  color: #d1d5db;
+
+  line-height: 1.8;
+
+  font-size: 15px;
+
+}
+
+
+/* =========================
+   AI SUMMARY MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .ai-summary-top {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+  }
+
+
+  .ai-summary-top button {
+
+    width: 100%;
+
+  }
+
+}
+
+/* =========================
+   CUSTOM TOAST
+========================= */
+
+.custom-toast {
+
+  background: #111827 !important;
+
+  color: white !important;
+
+  border-radius: 14px !important;
+
+  padding: 14px 18px !important;
+
+  font-size: 15px !important;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.35);
+
+}
+
+
+/* SUCCESS */
+
+.success-toast {
+
+  border-left:
+    4px solid #00d9ff;
+
+}
+
+
+/* ERROR */
+
+.error-toast {
+
+  border-left:
+    4px solid #ff4d4d;
+
+}
+
+
+/* LOADING */
+
+.loading-toast {
+
+  border-left:
+    4px solid #22c55e;
+
+} 
