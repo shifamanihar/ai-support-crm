@@ -18,7 +18,8 @@ import {
 
 import toast from "react-hot-toast";
 
-import axios from "axios";
+import API from "../../api/axios";
+
 
 const Registration = () => {
 
@@ -37,7 +38,12 @@ const Registration = () => {
 
     });
 
-  const handleChange = (e) => {
+
+  const handleChange = (
+
+    e: React.ChangeEvent<HTMLInputElement>
+
+  ) => {
 
     setFormData({
 
@@ -50,15 +56,22 @@ const Registration = () => {
 
   };
 
+
   const handleSubmit = async (
-    e
+
+    e: React.FormEvent<HTMLFormElement>
+
   ) => {
 
     e.preventDefault();
 
+
     if (
+
       formData.password !==
+
       formData.confirmPassword
+
     ) {
 
       toast.error(
@@ -69,11 +82,13 @@ const Registration = () => {
 
     }
 
+
     try {
 
       const response =
-        await axios.post(
-          "http://localhost:3000/api/users/register",
+        await API.post(
+
+          "/users/register",
 
           {
 
@@ -87,11 +102,14 @@ const Registration = () => {
               formData.password,
 
           }
+
         );
+
 
       toast.success(
         response.data.message
       );
+
 
       setTimeout(() => {
 
@@ -99,17 +117,23 @@ const Registration = () => {
 
       }, 1500);
 
-    } catch (error) {
+    }
+
+    catch (error: any) {
 
       toast.error(
+
         error.response?.data
           ?.message ||
-          "Registration Failed"
+
+        "Registration Failed"
+
       );
 
     }
 
   };
+
 
   return (
 
@@ -122,12 +146,17 @@ const Registration = () => {
         <div className="left-section-register">
 
           <h1 className="register-title">
+
             AI Support CRM
+
           </h1>
 
           <p className="register-subtitle">
+
             Create your account
+
           </p>
+
 
           <form
             onSubmit={handleSubmit}
@@ -140,19 +169,27 @@ const Registration = () => {
               <FaUser className="input-icon" />
 
               <input
+
                 type="text"
+
                 name="fullName"
+
                 placeholder="Enter full name"
+
                 value={
                   formData.fullName
                 }
+
                 onChange={
                   handleChange
                 }
+
                 required
+
               />
 
             </div>
+
 
             {/* EMAIL */}
 
@@ -161,19 +198,27 @@ const Registration = () => {
               <FaEnvelope className="input-icon" />
 
               <input
+
                 type="email"
+
                 name="email"
+
                 placeholder="Enter email"
+
                 value={
                   formData.email
                 }
+
                 onChange={
                   handleChange
                 }
+
                 required
+
               />
 
             </div>
+
 
             {/* PASSWORD */}
 
@@ -182,19 +227,27 @@ const Registration = () => {
               <FaLock className="input-icon" />
 
               <input
+
                 type="password"
+
                 name="password"
+
                 placeholder="Enter password"
+
                 value={
                   formData.password
                 }
+
                 onChange={
                   handleChange
                 }
+
                 required
+
               />
 
             </div>
+
 
             {/* CONFIRM PASSWORD */}
 
@@ -203,25 +256,36 @@ const Registration = () => {
               <FaLock className="input-icon" />
 
               <input
+
                 type="password"
+
                 name="confirmPassword"
+
                 placeholder="Confirm password"
+
                 value={
                   formData.confirmPassword
                 }
+
                 onChange={
                   handleChange
                 }
+
                 required
+
               />
 
             </div>
 
+
             {/* BUTTON */}
 
             <button
+
               type="submit"
+
               className="register-btn"
+
             >
 
               <FaUserPlus />
@@ -232,26 +296,34 @@ const Registration = () => {
 
           </form>
 
+
           <p className="login-link-text">
 
             Already have an account?
 
             <Link to="/login">
+
               Login
+
             </Link>
 
           </p>
 
         </div>
 
+
         {/* RIGHT SECTION */}
 
         <div className="right-section-register">
 
           <img
+
             src={registerImg}
+
             alt="register"
+
             className="register-image"
+
           />
 
         </div>

@@ -57,14 +57,16 @@ const TicketChart = () => {
      STATES
   ========================= */
 
-  const [chartData,
-    setChartData] =
-    useState<any[]>([]);
+  const [
+    chartData,
+    setChartData,
+  ] = useState<any[]>([]);
 
 
-  const [loading,
-    setLoading] =
-    useState(true);
+  const [
+    loading,
+    setLoading,
+  ] = useState(true);
 
 
   /* =========================
@@ -78,9 +80,7 @@ const TicketChart = () => {
 
         const response =
           await API.get(
-
             "/tickets/stats/chart"
-
           );
 
 
@@ -104,7 +104,7 @@ const TicketChart = () => {
 
       }
 
-  };
+    };
 
 
   useEffect(() => {
@@ -419,7 +419,7 @@ const TicketChart = () => {
                   pieData.map(
 
                     (
-                      entry,
+                      _,
                       index
                     ) => (
 

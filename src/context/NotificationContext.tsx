@@ -6,6 +6,10 @@ import {
 
   useState,
 
+} from "react";
+
+import type {
+
   ReactNode,
 
 } from "react";
@@ -73,6 +77,17 @@ const NotificationContext =
 
 
 /* =========================
+   PROVIDER TYPES
+========================= */
+
+type ProviderProps = {
+
+  children: ReactNode;
+
+};
+
+
+/* =========================
    PROVIDER
 ========================= */
 
@@ -80,18 +95,18 @@ export const NotificationProvider = ({
 
   children,
 
-}: {
-
-  children: ReactNode;
-
-}) => {
+}: ProviderProps) => {
 
 
-  const [notifications,
-    setNotifications] =
-    useState<
-      NotificationType[]
-    >([]);
+  const [
+
+    notifications,
+
+    setNotifications,
+
+  ] = useState<
+    NotificationType[]
+  >([]);
 
 
   /* =========================
@@ -191,7 +206,7 @@ export const NotificationProvider = ({
 
       setNotifications([]);
 
-  };
+    };
 
 
   return (

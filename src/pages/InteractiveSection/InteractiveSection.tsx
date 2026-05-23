@@ -19,7 +19,6 @@ const sections = {
       "AI Ticket Automation",
 
     description:
-
       "Automatically categorize and prioritize customer tickets using AI-powered workflows for faster support resolution.",
 
   },
@@ -33,7 +32,6 @@ const sections = {
       "Smart Customer Insights",
 
     description:
-
       "Track customer activities, monitor support history, and understand customer behavior in real time.",
 
   },
@@ -47,7 +45,6 @@ const sections = {
       "Analytics Dashboard",
 
     description:
-
       "Visualize support metrics, response time, open tickets, and performance analytics instantly.",
 
   },
@@ -61,7 +58,6 @@ const sections = {
       "AI Chatbot Assistant",
 
     description:
-
       "Provide instant automated responses with a smart AI assistant available 24/7 for customer support.",
 
   },
@@ -75,7 +71,6 @@ const sections = {
       "Team Collaboration",
 
     description:
-
       "Allow support agents to collaborate efficiently with shared ticket systems and centralized communication.",
 
   },
@@ -83,17 +78,28 @@ const sections = {
 };
 
 
+type SectionKey =
+  keyof typeof sections;
+
+
 const InteractiveSection = () => {
 
-  const [activeSection,
-    setActiveSection] =
-    useState(
-      "AI Ticket Automation"
-    );
+  const [
+    activeSection,
+
+    setActiveSection,
+
+  ] = useState<SectionKey>(
+    "AI Ticket Automation"
+  );
+
 
   return (
 
-    <section id="features" className="interactive-section">
+    <section
+      id="features"
+      className="interactive-section"
+    >
 
       {/* TOP TEXT */}
 
@@ -123,7 +129,10 @@ const InteractiveSection = () => {
 
         <div className="interactive-left">
 
-          {Object.keys(sections).map(
+          {(Object.keys(
+            sections
+          ) as SectionKey[]).map(
+
             (section) => (
 
               <div
@@ -136,7 +145,9 @@ const InteractiveSection = () => {
                 <button
 
                   onClick={() =>
-                    setActiveSection(section)
+                    setActiveSection(
+                      section
+                    )
                   }
 
                   className={`interactive-btn ${
@@ -154,7 +165,8 @@ const InteractiveSection = () => {
 
                 {/* TEXT BELOW BUTTON */}
 
-                {activeSection === section && (
+                {activeSection ===
+                  section && (
 
                   <div className="button-content">
 
@@ -185,6 +197,7 @@ const InteractiveSection = () => {
               </div>
 
             )
+
           )}
 
         </div>
