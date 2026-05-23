@@ -106,7 +106,7 @@ const EditTicketModal = ({
 
         await axios.put(
 
-          `http://localhost:3000/api/tickets/${ticket._id}`,
+          `https://ai-support-crm.onrender.com/api/tickets/${ticket._id}`,
 
           formData
 

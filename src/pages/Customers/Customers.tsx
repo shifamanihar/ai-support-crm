@@ -47,7 +47,7 @@ const Customers = () => {
         const response =
           await axios.get(
 
-            "http://localhost:3000/api/tickets"
+            "https://ai-support-crm.onrender.com/api/tickets"
 
           );
 

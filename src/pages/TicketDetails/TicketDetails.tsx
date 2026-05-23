@@ -54,7 +54,7 @@ const TicketDetails = () => {
         const response =
           await axios.get(
 
-            `http://localhost:3000/api/tickets/${id}`
+            `https://ai-support-crm.onrender.com/api/tickets/${id}`
 
           );
 
@@ -92,7 +92,7 @@ const TicketDetails = () => {
 
         await axios.post(
 
-          `http://localhost:3000/api/tickets/${id}/comment`,
+          `https://ai-support-crm.onrender.com/api/tickets/${id}/comment`,
 
           {
 
@@ -184,7 +184,7 @@ const TicketDetails = () => {
         const response =
           await axios.post(
 
-            "http://localhost:3000/api/ai/summary",
+            "https://ai-support-crm.onrender.com/api/ai/summary",
 
             {
 
@@ -528,7 +528,7 @@ const TicketDetails = () => {
 
             <img
 
-              src={`http://localhost:3000/uploads/${ticket.attachment}`}
+              src={`https://ai-support-crm.onrender.com/uploads/${ticket.attachment}`}
 
               alt="attachment"
 
@@ -540,7 +540,7 @@ const TicketDetails = () => {
 
             <a
 
-              href={`http://localhost:3000/uploads/${ticket.attachment}`}
+              href={`https://ai-support-crm.onrender.com/uploads/${ticket.attachment}`}
 
               target="_blank"
 

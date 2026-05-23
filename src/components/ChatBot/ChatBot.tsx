@@ -105,7 +105,7 @@ const ChatBot = () => {
         const response =
           await axios.post(
 
-            "http://localhost:3000/api/ai/chat",
+            "https://ai-support-crm.onrender.com/api/ai/chat",
 
             {
 

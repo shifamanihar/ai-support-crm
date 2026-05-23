@@ -56,7 +56,7 @@ const AIAssistant = () => {
         const response =
           await axios.get(
 
-            "http://localhost:3000/api/ai/history"
+            "https://ai-support-crm.onrender.com/api/ai/history"
 
           );
 
@@ -169,7 +169,7 @@ const AIAssistant = () => {
         const response =
           await axios.post(
 
-            "http://localhost:3000/api/ai/chat",
+            "https://ai-support-crm.onrender.com/api/ai/chat",
 
             {
 
