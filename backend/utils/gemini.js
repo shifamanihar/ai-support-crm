@@ -4,7 +4,6 @@ const {
   "@google/generative-ai"
 );
 
-
 const genAI =
   new GoogleGenerativeAI(
 
@@ -12,35 +11,44 @@ const genAI =
 
   );
 
-
 async function generateReply(
   message
 ) {
 
-  const model =
-    genAI.getGenerativeModel({
+  try {
 
-      model:
-        "gemini-1.5-flash",
+    const model =
+      genAI.getGenerativeModel({
 
-    });
+        model:
+          "gemini-1.5-flash",
 
+      });
 
-  const result =
-    await model.generateContent(
+    const result =
+      await model.generateContent(
+        message
+      );
 
-      message
+    const response =
+      await result.response;
 
+    return response.text();
+
+  }
+
+  catch (error) {
+
+    console.log(
+      "GEMINI ERROR:",
+      error
     );
 
+    return "AI temporarily unavailable 😭";
 
-  const response =
-    await result.response;
-
-  return response.text();
+  }
 
 }
-
 
 module.exports =
   generateReply;
