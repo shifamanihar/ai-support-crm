@@ -31,9 +31,9 @@ async function generateReply(
       );
 
     const response =
-      await result.response;
+      result.response.text();
 
-    return response.text();
+    return response;
 
   }
 
