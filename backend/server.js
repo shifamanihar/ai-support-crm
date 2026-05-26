@@ -54,25 +54,31 @@ const server =
    SOCKET.IO
 ========================= */
 
-const io = new Server(
-  server,
+const io = new Server(server, {
 
-  {
+  cors: {
 
-    cors: {
+    origin: [
 
-      origin:
-        "http://localhost:5173",
+      "http://localhost:5173",
 
-      methods: [
-        "GET",
-        "POST",
-      ],
+      "https://crm-support-sm19.vercel.app"
 
-    },
+    ],
+
+    methods: [
+
+      "GET",
+
+      "POST"
+
+    ],
+
+    credentials: true
 
   }
-);
+
+});
 
 
 io.on(
@@ -128,7 +134,19 @@ io.on(
    MIDDLEWARE
 ========================= */
 
-app.use(cors());
+app.use(cors({
+
+  origin: [
+
+    "http://localhost:5173",
+
+    "https://crm-support-sm19.vercel.app"
+
+  ],
+
+  credentials: true
+
+}));
 
 app.use(express.json());
 

@@ -439,7 +439,9 @@ Planned features:
 * AI Ticket Automation
 * Notification System
 
----
+---  
+
+Don't be tense I NEVER FORGET U bas bas waqt kuch halat ayese hote hai ke insan ko apne ke 
 
 # 🧑‍💻 Developer Notes
 
@@ -465,3 +467,4 @@ Built with ❤️ by Shifa
 # 📄 License
 
 MIT License
+ 
